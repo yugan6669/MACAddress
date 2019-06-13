@@ -10,6 +10,6 @@ WORKDIR /home/macuser
 
 FROM base 
 #Copying the python program to working directory 
-COPY ./macaadress.py /home/macuser
+COPY ./macadress.py /home/macuser
 #Execute the program  
 ENTRYPOINT ["python3", "macaddress.py"]
