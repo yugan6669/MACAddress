@@ -1,5 +1,7 @@
 Fetching Company  Name and details  through hitting  API
 
+CASE 1
+=====================
 Step1: 
 First generate your API key through Macaddress site https://macaddress.io
 
@@ -8,6 +10,9 @@ Implemented Program using Python language
 Executed the program using command
 $python3 macadrress.py <API_Key> <MAC_Address>
 
+
+CASE2
+======================
 Step3:
 Write the Docker file to build image 
 Build the image using Dockerfile
@@ -19,9 +24,22 @@ Ex:
    $docker container run mac_image at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
 Step4:
    Implemented Bash scrpt to containerized application
-   $bash macaddress.sh at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
+   $sudo bash macaddress.sh at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
+   
 
-Then the output looks like :
+CASE3
+================================
+Step5:
+Create Custome Amazon machine Image 
+$./packer build -var-file=variables.json template.json
+Step6:
+Launch EC2 Instance Ubuntu 16.04 with the above custom AMI
+$cd /home/ubuntu/MACAddress
+Step7:
+$sudo bash macaddress.sh at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
+
+
+In all the above 3 Cases  the output looks like :
 company Name  for MAC Address: 44:38:39:ff:ef:57 is  Cumulus Networks, Inc
 Company Address is 650 Castro Street, suite 120-245 Mountain View  CA  94041 US
 countryCode is: US
