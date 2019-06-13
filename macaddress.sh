@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 API_KEY=$1
 MAC_ADDRESS=$2
 #Build the Image using  Dockerfile
