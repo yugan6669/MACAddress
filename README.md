@@ -1,12 +1,15 @@
-Step1
-Created API key in https://macaddress.io
-Step2
-Writing Python program to hit API
-step3
-Wrote Docker file to build image and containerized program
-step4
-to run container
-$docker image build  .
+Fetching Company  Data through hitting  API
+First generate your API key through Macaddress site https://macaddress.io
+Implemented Program using Python language
+Executed the program using command
+$python3 macadrress.py <API_Key> <MAC_Address>
+
+Write the Docker file to build image 
+Build the image using Dockerfile
+$docker image build -t macimage .
+Run the container and pass API_Key and MAC Adress
 $docker container run <Image-Id> <API-key> <Mac-Address>
-  ex: 
- $ docker container run <Image-Id> at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
+Ex:$docker container run <Image-Id> at_Jkpyix2qvXMRA29casQxJ1nqioU8b 44:38:39:ff:ef:57
+Then we will get output like :
+Company Name is: 
+Compnay Address is: 
