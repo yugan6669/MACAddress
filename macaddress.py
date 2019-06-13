@@ -18,6 +18,7 @@ def getData():
   else:
     print("company Name  for MAC Address: "+data['macAddressDetails']['searchTerm'] + " is  "+data['vendorDetails']['companyName']);
     print("Company Address is " +data['vendorDetails']['companyAddress']);
+    print ("countryCode is: " +data['vendorDetails']['countryCode'])
 if __name__ == "__main__":
     getData()
 
