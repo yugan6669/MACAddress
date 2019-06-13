@@ -10,4 +10,4 @@ json_obj = urllib.request.urlopen(url)
 reader = codecs.getreader("utf-8")
 data = json.load(reader(json_obj))
 print ("company Name  for MAC Address: "+MAC_ADDRESS + " is  "+data['vendorDetails']['companyName']);
-print ("company Details "+data);
+print (data);
