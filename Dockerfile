@@ -1,5 +1,6 @@
 FROM python:3
-WORKDIR /usr/src/app
-COPY ./macaddress.py /usr/src/app/
-RUN pip install requests
-CMD ["python3","macaddress.py"]
+RUN mkdir -p /usr/share/macapp
+WORKDIR /usr/share/macapp                                                                                                                                                                       
+COPY ./macaddress.py /usr/share/macapp
+ENTRYPOINT ["python3", "macaddress.py"]
+
