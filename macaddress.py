@@ -9,7 +9,6 @@ url = 'https://api.macaddress.io/v1?apiKey='+API_KEY+'&output=json&search='+MAC_
 json_obj = urllib.request.urlopen(url)
 reader = codecs.getreader("utf-8")
 data = json.load(reader(json_obj))
-print ("company Name  for MAC Address: "+MAC_ADDRESS + " is  "+data['vendorDetails']['companyName']);
+print ("company Name  for MAC Address: "+data['macAddressDetails']['searchTerm'] + " is  "+data['vendorDetails']['companyName']);
 print ("Company Address is " +data['vendorDetails']['companyAddress']);
 
-print (data['macAddressDetails']);
