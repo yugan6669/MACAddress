@@ -12,4 +12,4 @@ data = json.load(reader(json_obj))
 print ("company Name  for MAC Address: "+MAC_ADDRESS + " is  "+data['vendorDetails']['companyName']);
 print ("Company Address is " +data['vendorDetails']['companyAddress']);
 print(data)
-print ("mac address is " +data['macAddressDetails']);
+print (data['macAddressDetails']);
